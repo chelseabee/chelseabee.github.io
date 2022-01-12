@@ -1,1 +1,3 @@
 # chelseabee.github.io
+
+1/11/2022 - learning about responsive nav using html/ css/ js. The Nav is currently in a very ugly state, but hopefully I can figure out how to beautify it more. I'm defintely getting more comfortable with media inquiries and I just learned about @supports which is another awesome feature. I am realizing that I dont really know much in the way of alt device usage ( not even sure if thats what you call it) along the lines of screen readers etc, I need to pick up on more accesible code techniques. I am also realizing that classes are likely the most readable selectors in css (I could be wrong, but right now they feel the most minimal). 
