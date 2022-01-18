@@ -1,3 +1,5 @@
 # chelseabee.github.io
 
 1/11/2022 - learning about responsive nav using html/ css/ js. The Nav is currently in a very ugly state, but hopefully I can figure out how to beautify it more. I'm defintely getting more comfortable with media inquiries and I just learned about @supports which is another awesome feature. I am realizing that I dont really know much in the way of alt device usage ( not even sure if thats what you call it) along the lines of screen readers etc, I need to pick up on more accesible code techniques. I am also realizing that classes are likely the most readable selectors in css (I could be wrong, but right now they feel the most minimal). 
+
+1/18/22 - sooooo Bootstrap is a thing. I am in the process of changing my portfolio over to include bootstrap. I dont want to use to many design elements, for fear of looking too generic, but the responsive aspect and the grid/ flex properties are pretty amazing from a time/ beginner standpoint. I have a fear that employers may not like to see bootstrap, that they would prefer some raw css, but I also find it vaulable to know more technologies? .... oh the struggle. 
