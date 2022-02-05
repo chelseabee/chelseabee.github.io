@@ -33,18 +33,23 @@ body{
 
 .brand-name{
     font-size: 2rem;
-    padding:16px;
+    padding-top:16px;
+    padding-left:16px;
     color:#ff6347;
     display:flex;
-    float:left;
+    /*float:left;*/
 }
 .main-nav {
     list-style-type: none;
     display: none;
+    
   }
 
 .active {
     display: block;
+    text-align: start;
+    background-color: rgb(255, 237, 214);
+    background-size: cover;
   }
 
 .navbar-toggle {
@@ -56,15 +61,32 @@ body{
     font-size: 24px;  
    
 }
+/* 
 .navbar{
-    float:right;
+   padding-top: 1.2rem;
     padding:1.5rem;
+    
+    float:right;
     margin-right:1.5rem;
+    
     margin-top:1.5rem;
+    
+    
+} */
+.navbar ul{
+    margin:0;
+    padding:0; 
 }
 
+.navbar li{
+    text-align: center;
+    margin:0;
+    padding:0;
+
+}
 .navbar a{
     text-decoration:none;
+    display:block;
     padding:16px;
     color:tomato;
     font-size: 1.5rem;
@@ -79,6 +101,9 @@ body{
 }
 
 @media (min-width: 700px)  {
+    .active{
+        background-color:transparent;
+    }
     .nav-container{
         background: #3bcabe28;
         width: 100%;
@@ -128,9 +153,14 @@ body{
     display:none;
     }
 
+    .masthead h1{
+        font-size:15rem !important;
+    }
+    .masthead h2{
+        font-size: 5rem !important;
+    }
+
 }
-
-
 
 
 .masthead{   
@@ -145,27 +175,42 @@ body{
 
 .masthead h1{
     font-family: 'Oleo Script', cursive;
-    font-size: 15rem;
+    font-size: 9rem;
     color:tomato;
     margin-bottom:10px;
 }
 
 .masthead h2{
     font-family: 'Concert One',sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     color:tomato;
     margin-top:10px;
+    margin-bottom:10px;
+}
+
+.fa-chevron-down{
+color:tomato;
+font-size: 2rem;
+text-align: center;
+padding-bottom: 2em;
+transition: all 1s ease;
+}
+
+.fa-chevron-down:hover{
+    font-size: 2.5rem;
 }
 
 .about-section{
     background-color:rgb(255, 237, 214);
+    min-height:100vh;
+    min-width:100vw;
     margin-top:0;
     text-align:center;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom:40px;
+
 }
  h3{
     font-family: 'Pacifico', Helvetica, sans-serif;
@@ -173,7 +218,10 @@ body{
     text-align:center;
     font-size: 3rem;
     padding-top:0;
-
+}
+.about-section i{
+    padding-top: 4rem;
+    padding-bottom:0; 
 }
 
 .about-section p{
@@ -183,9 +231,24 @@ body{
     width:50%; 
 }
 .projects-section{
+    min-height:100vh;
+    min-width:100vw;
     background: bisque;
-    padding-bottom:5rem;
+    padding-bottom:0;
     padding-top:.5rem;
+    display:flex;
+    flex-direction: column;
+    gap:3.5rem;
+    justify-content: center;
+}
+.projects-section a{
+    text-decoration: none;
+    color: tomato;
+    transition: all .5s ease;
+}
+
+.projects-section a:hover{
+    font-size: 1.5rem;
 }
 
 .projects-wrapper{
@@ -209,7 +272,19 @@ body{
     opacity: 50%;
     
 }
+.projects-section i{
+    padding-top:3rem;
+    padding-bottom:0; 
+}
 
+.contact-section{
+    min-height:100vh;
+    min-width:100vw;
+}
+.contact-section h3{
+    padding-top:5rem;
+    padding-bottom:2rem; 
+}
 
 .contact-section h4{
     font-family: 'Oleo Script', cursive;
@@ -227,6 +302,12 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;   
+}
+.contact-section-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .contact-section p{
     margin:0;
@@ -249,16 +330,17 @@ input{
     background:tomato;
     transition: all 1s ease;
     border: none;
-    border-radius: 5%;
+    border-radius: 15px; 
     padding: 10px 40px;
     font-family: 'Roboto Slab',sans-serif ;
     font-size: 1rem;
+    text-transform: uppercase;
+    color:white;
 }
 
 .submit-btn:hover{
-    background: radial-gradient(circle, rgba(247,233,207,1) 6%, rgba(255,99,71,1) 48%);
-    padding:10px 50px;
-    font-size: 1.5rem;
+    font-size: 1.11rem;
+    
 }
 
 .fa-brands{
@@ -280,3 +362,6 @@ footer{
     color:rgb(255, 187, 0);
     font-family: 'Concert One',sans-serif;
 }
+
+
+
