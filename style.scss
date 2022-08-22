@@ -1,0 +1,458 @@
+// == Fonts == 
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+$concertOne:'Concert One',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
+$roboto: 'Roboto Slab',sans-serif ;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+$pacifico: 'Pacifico', Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+$oleo:  'Oleo Script', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+$aboreto:'Aboreto', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$montserrat: 'Montserrat', sans-serif;
+
+// == Colors == 
+$pink:#fcb9b9;
+$gray: rgb(248, 248, 248);
+$black: black; 
+$yellow: rgb(224, 165, 0);
+$red: rgb(255, 79, 47);
+
+
+
+
+* {
+   box-sizing: border-box; 
+  }
+
+body{
+    margin:0;
+    background-color:white;
+    text-align:center;
+    font-family:$montserrat;
+    color:$black;
+    font-size:1rem; 
+    overflow-x: hidden;
+}
+
+.nav-container{
+    background: $gray;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: $aboreto;
+}
+
+.brand-name{
+    font-size: 2rem;
+    padding-top:16px;
+    padding-left:16px;
+    color:tomato;
+    display:flex;
+    /*float:left;*/
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+    
+  }
+
+.active {
+    display: block;
+    text-align: start;
+    background-color: rgba(243, 243, 243, 0.637);
+    background-size: cover;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+  }
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;  
+   
+}
+.navbar{
+    ul{
+        margin:0;
+        padding:0; 
+    }
+    li{
+        text-align: center;
+        margin:0;
+        padding:0;
+    }
+    a{
+        text-decoration:none;
+        display:block;
+        padding:16px;
+        color:$black;
+        font-size: 1.5rem;
+    }
+    a:hover{
+        text-decoration: underline $black 4px;
+    }
+}
+
+
+.fa-bars{
+    color:tomato;
+    font-size:2rem;
+}
+// adjusts for larger views
+@media (min-width: 700px)  {
+    body{
+        margin:0;
+        background-color:white;
+        text-align:center;
+        font-family:$montserrat;
+        color:$black;
+        font-size:1.2rem !important; 
+    }
+    .active{
+        background-color:transparent;
+    }
+    .nav-container{
+        background: $gray;
+        width: 100%;
+        height: 76px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        font-family: $aboreto;
+    }
+    
+    .brand-name{
+        font-size: 2rem;
+        padding:16px;
+        color:tomato;
+        display:flex;
+        float:left;
+        font-family: $oleo;
+    }
+    
+    .navbar{
+        display:flex;
+        float:right;
+        margin:0;
+        padding:0;
+        ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:space-around;
+        }
+        a{
+            text-decoration:none;
+            padding:16px;
+            color:$black;
+            font-size: 1.5rem; 
+        }
+    }
+    
+    .navbar-toggle{
+    display:none;
+    }
+
+    .masthead {
+            display:flex;
+            flex-direction: row !important;
+            align-items: center;
+            text-align:center;
+            justify-content: space-evenly;
+            
+        
+    h1{
+        font-size:15rem !important;
+        margin:0;
+    }
+    h2{
+        font-size: 5rem !important;
+    }
+    .masthead-right{
+        
+        img{
+            width:20em;
+            height:auto;
+            border-radius: 80px;
+            border:7px solid white;
+            box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+            padding:7px;
+            margin: 7em;
+         }
+    }
+} 
+    h3{
+        font-family: 'Pacifico', Helvetica, sans-serif;
+        color: rgb(224, 165, 0);
+        text-align:center;
+        font-size: 3rem !important;
+        padding-top:0;
+    }
+    .projects-wrapper{
+        display:flex;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+}
+
+
+.masthead{   
+    background-color:$pink;
+    min-height:100vh;
+    min-width:100vw;
+    margin: 0;
+    padding:2rem;
+    overflow:hidden;
+    text-align:center;
+    align-items: center;
+    margin-bottom:0;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    .masthead-left{
+        align-items: center;
+    }
+    .masthead-right{
+        align-items: center;
+        text-align: center;
+        img{
+            width:15em;
+            height:auto;
+            border-radius: 80px;
+            border:7px solid white;
+            box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+            padding:7px;
+            margin: 3em;
+        }
+        .fa-chevron-down{
+            color:tomato;
+            font-size: 2rem;
+            text-align: center;
+            padding-bottom: 2em;
+            transition: all 1s ease;
+            }
+            
+            .fa-chevron-down:hover{
+                font-size: 2.5rem;
+            }
+    
+    }
+    h1{
+        font-family: 'Oleo Script', cursive;
+        font-size: 9rem;
+        color:$black;
+        margin-bottom:10px;
+        
+    }
+    h2{
+        font-family: $aboreto;
+        font-size: 3rem;
+        color:rgb(255, 79, 47);
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+}
+
+
+
+.about-section{
+    background-color:white;
+    min-height:100vh;
+    min-width:100vw;
+    padding:2rem;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2rem; 
+    justify-content: space-evenly;
+    
+    .about-flex-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin:0 4rem;
+    
+    }
+    i{
+        padding-top: 4rem;
+        padding-bottom:0; 
+    }
+    .about-p{
+        width:50%; 
+    }
+    ul{
+        list-style-type: none;
+    }
+    h1{
+        color:$black;
+        font-family: 'Aboreto', cursive;
+        font-size: 4rem;
+        margin:2rem;
+        padding:4rem;
+    }
+
+}
+
+ h3{
+    font-family:$oleo;
+    color: tomato;
+    text-align:center;
+    font-size: 2rem;
+    padding-top:0;
+    margin:0; 
+}
+
+.projects-section{
+    min-height:100vh;
+    min-width:100vw;
+    background: $pink;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1{
+        font-family:$aboreto;
+        font-size: 4rem;
+        margin:0;
+    }
+    a{
+        text-decoration: none;
+        color: tomato;
+        transition: all .5s ease;
+    }
+    a:hover{
+        font-size: 1.5rem;
+    }
+    img{
+        max-width:20rem;
+        max-height:auto;
+        transition: all 2s ease;
+        border-radius: 5%;
+    }
+    img:hover{
+        max-width:26rem;
+        max-height:auto;
+        opacity: 50%;  
+    }
+    i{
+        padding-top:3rem;
+        padding-bottom:0; 
+    }
+}
+
+.projects-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-section{
+    min-height:100vh;
+    min-width:100vw;
+    background:white;
+    h1{
+        font-family:$aboreto;
+        font-size: 4rem;
+        padding:2rem;
+    }
+    h3{
+        padding-top:5rem;
+        padding-bottom:2rem; 
+    }
+    h4{
+        font-family: 'Oleo Script', cursive;
+        font-size: 6rem;
+        color:tomato;
+    }
+    p{
+        margin:0;
+    }
+}
+
+.contact-section-inner{
+    display:flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.contact-section-form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.contact-section-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input{
+    padding:10px 20px;
+    margin-bottom:1.5rem;
+    margin-top:40px;
+    margin-right:1.5rem;
+    border:2px solid black;
+
+    
+}
+
+.textarea-input{
+    min-height: 100px;
+    min-width:300px;
+    border: 2px solid black;
+}
+
+.submit-btn{
+    background:tomato;
+    transition: all 1s ease;
+    border: none;
+    border-radius: 15px; 
+    padding: 10px 40px;
+    font-family: $montserrat;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color:white;
+}
+
+.submit-btn:hover{
+    font-size: 1.11rem;
+    
+}
+
+.fa-brands{
+    color:tomato;
+    font-size:4rem;
+    padding:2rem;
+    transition: all 1s ease;
+}
+
+.fa-brands:hover{
+    font-size:5rem;
+    cursor:pointer;
+}
+
+
+footer{
+    background:white;
+    padding:2rem;
+    font-size: 1.5rem;
+    color: black;
+    font-family: $aboreto;
+}
