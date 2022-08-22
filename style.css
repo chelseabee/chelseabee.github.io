@@ -1,367 +1,552 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
-   box-sizing: border-box; 
-  }
-
-body{
-    margin:0;
-    background-color:rgb(255, 237, 214) ;
-    text-align:center;
-    font-family:'Roboto Slab',sans-serif ;
-    color:rgb(5, 67, 95);
-    font-size:1.2rem;
-    
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.nav-container{
-    background: #3bcabe28;
+body {
+  margin: 0;
+  background-color: white;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.nav-container {
+  background: #f8f8f8;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+  width: 100%;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-family: "Aboreto", cursive;
+}
+
+.brand-name {
+  font-size: 2rem;
+  padding-top: 16px;
+  padding-left: 16px;
+  color: tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*float:left;*/
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.active {
+  display: block;
+  text-align: start;
+  background-color: rgba(243, 243, 243, 0.637);
+  background-size: cover;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  display: block;
+  padding: 16px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.navbar a:hover {
+  -webkit-text-decoration: underline black 4px;
+          text-decoration: underline black 4px;
+}
+
+.fa-bars {
+  color: tomato;
+  font-size: 2rem;
+}
+
+@media (min-width: 700px) {
+  body {
+    margin: 0;
+    background-color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    font-size: 1.2rem !important;
+  }
+  .active {
+    background-color: transparent;
+  }
+  .nav-container {
+    background: #f8f8f8;
     width: 100%;
     height: 76px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    font-family: 'Pacifico', Helvetica, sans-serif;
-}
-
-.brand-name{
+    font-family: "Aboreto", cursive;
+  }
+  .brand-name {
     font-size: 2rem;
-    padding-top:16px;
-    padding-left:16px;
-    color:#ff6347;
-    display:flex;
-    /*float:left;*/
-}
-.main-nav {
-    list-style-type: none;
-    display: none;
-    
-  }
-
-.active {
-    display: block;
-    text-align: start;
-    background-color: rgb(255, 237, 214);
-    background-size: cover;
-  }
-
-.navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer; 
-    color: rgba(255,255,255,0.8);
-    font-size: 24px;  
-   
-}
-/* 
-.navbar{
-   padding-top: 1.2rem;
-    padding:1.5rem;
-    
-    float:right;
-    margin-right:1.5rem;
-    
-    margin-top:1.5rem;
-    
-    
-} */
-.navbar ul{
-    margin:0;
-    padding:0; 
-}
-
-.navbar li{
-    text-align: center;
-    margin:0;
-    padding:0;
-
-}
-.navbar a{
-    text-decoration:none;
-    display:block;
-    padding:16px;
-    color:tomato;
-    font-size: 1.5rem;
-}
-.navbar a:hover{
-    text-decoration: underline tomato 4px;
-}
-
-.fa-bars{
-    color:tomato;
-    font-size:2rem;
-}
-
-@media (min-width: 700px)  {
-    .active{
-        background-color:transparent;
-    }
-    .nav-container{
-        background: #3bcabe28;
-        width: 100%;
-        height: 76px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        font-family: 'Pacifico', Helvetica, sans-serif;
-    }
-    
-    .brand-name{
-        font-size: 2rem;
-        padding:16px;
-        color:#ff6347;
-        display:flex;
-        float:left;
-    }
-    
-    .navbar{
-        display:flex;
-        float:right;
-        margin:0;
-        padding:0;
-        
-    }
-    
-    .navbar ul{
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content:space-around;
-       
-    }
-    
-    .navbar a{
-        text-decoration:none;
-        padding:16px;
-        color:tomato;
-        font-size: 1.5rem;
-      
-    }
-
-    
-    .navbar-toggle{
-    display:none;
-    }
-
-    .masthead h1{
-        font-size:15rem !important;
-    }
-    .masthead h2{
-        font-size: 5rem !important;
-    }
-
-}
-
-
-.masthead{   
-    background: bisque;
-    min-height:100vh;
-    min-width:100vw;
-    margin: 0;
-    overflow:hidden;
-    text-align:center;
-    margin-bottom:0;
-}
-
-.masthead h1{
-    font-family: 'Oleo Script', cursive;
-    font-size: 9rem;
-    color:tomato;
-    margin-bottom:10px;
-}
-
-.masthead h2{
-    font-family: 'Concert One',sans-serif;
-    font-size: 3rem;
-    color:tomato;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.fa-chevron-down{
-color:tomato;
-font-size: 2rem;
-text-align: center;
-padding-bottom: 2em;
-transition: all 1s ease;
-}
-
-.fa-chevron-down:hover{
-    font-size: 2.5rem;
-}
-
-.about-section{
-    background-color:rgb(255, 237, 214);
-    min-height:100vh;
-    min-width:100vw;
-    margin-top:0;
-    text-align:center;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
- h3{
-    font-family: 'Pacifico', Helvetica, sans-serif;
-    color: rgb(255, 187, 0);
-    text-align:center;
-    font-size: 3rem;
-    padding-top:0;
-}
-.about-section i{
-    padding-top: 4rem;
-    padding-bottom:0; 
-}
-
-.about-section p{
-    line-height: 1.5rem;
-    /*padding-left:10rem;
-    padding-right:10rem;*/
-    width:50%; 
-}
-.projects-section{
-    min-height:100vh;
-    min-width:100vw;
-    background: bisque;
-    padding-bottom:0;
-    padding-top:.5rem;
-    display:flex;
-    flex-direction: column;
-    gap:3.5rem;
-    justify-content: center;
-}
-.projects-section a{
-    text-decoration: none;
+    padding: 16px;
     color: tomato;
-    transition: all .5s ease;
-}
-
-.projects-section a:hover{
-    font-size: 1.5rem;
-}
-
-.projects-wrapper{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.projects-section img{
-    max-width:20rem;
-    max-height:auto;
-    transition: all 2s ease;
-    border-radius: 5%;
-    
-}
-
-.projects-section img:hover{
-    max-width:26rem;
-    max-height:auto;
-    opacity: 50%;
-    
-}
-.projects-section i{
-    padding-top:3rem;
-    padding-bottom:0; 
-}
-
-.contact-section{
-    min-height:100vh;
-    min-width:100vw;
-}
-.contact-section h3{
-    padding-top:5rem;
-    padding-bottom:2rem; 
-}
-
-.contact-section h4{
-    font-family: 'Oleo Script', cursive;
-    font-size: 6rem;
-    color:tomato;
-}
-.contact-section-inner{
-    display:flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-evenly;
-}
-
-.contact-section-form{
-    display:flex;
-    flex-direction: column;
-    align-items: center;   
-}
-.contact-section-links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.contact-section p{
-    margin:0;
-}
-input{
-    padding:10px 20px;
-    margin-bottom:1.5rem;
-    margin-top:40px;
-    margin-right:1.5rem;
-    border:none;
-    
-}
-
-.textarea-input{
-    min-height: 100px;
-    min-width:300px;
-}
-
-.submit-btn{
-    background:tomato;
-    transition: all 1s ease;
-    border: none;
-    border-radius: 15px; 
-    padding: 10px 40px;
-    font-family: 'Roboto Slab',sans-serif ;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color:white;
-}
-
-.submit-btn:hover{
-    font-size: 1.11rem;
-    
-}
-
-.fa-brands{
-    color:tomato;
-    font-size:4rem;
-    padding:2rem;
-    transition: all 1s ease;
-}
-
-.fa-brands:hover{
-    font-size:5rem;
-    cursor:pointer;
-}
-
-
-footer{
-    padding:2rem;
+    float: left;
+    font-family: "Oleo Script", cursive;
+  }
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navbar a {
+    text-decoration: none;
+    padding: 16px;
+    color: black;
     font-size: 1.5rem;
-    color:rgb(255, 187, 0);
-    font-family: 'Concert One',sans-serif;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .masthead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .masthead h1 {
+    font-size: 15rem !important;
+    margin: 0;
+  }
+  .masthead h2 {
+    font-size: 5rem !important;
+  }
+  .masthead .masthead-right img {
+    width: 20em;
+    height: auto;
+    border-radius: 80px;
+    border: 7px solid white;
+    -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+            box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+    padding: 7px;
+    margin: 7em;
+  }
+  h3 {
+    font-family: 'Pacifico', Helvetica, sans-serif;
+    color: #e0a500;
+    text-align: center;
+    font-size: 3rem !important;
+    padding-top: 0;
+  }
+  .projects-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
+.masthead {
+  background-color: #fcb9b9;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 
+.masthead .masthead-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+.masthead .masthead-right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.masthead .masthead-right img {
+  width: 15em;
+  height: auto;
+  border-radius: 80px;
+  border: 7px solid white;
+  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+          box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.397);
+  padding: 7px;
+  margin: 3em;
+}
+
+.masthead .masthead-right .fa-chevron-down {
+  color: tomato;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 2em;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.masthead .masthead-right .fa-chevron-down:hover {
+  font-size: 2.5rem;
+}
+
+.masthead h1 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 9rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.masthead h2 {
+  font-family: "Aboreto", cursive;
+  font-size: 3rem;
+  color: #ff4f2f;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about-section {
+  background-color: white;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  line-height: 2rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.about-section .about-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0 4rem;
+}
+
+.about-section i {
+  padding-top: 4rem;
+  padding-bottom: 0;
+}
+
+.about-section .about-p {
+  width: 50%;
+}
+
+.about-section ul {
+  list-style-type: none;
+}
+
+.about-section h1 {
+  color: black;
+  font-family: 'Aboreto', cursive;
+  font-size: 4rem;
+  margin: 2rem;
+  padding: 4rem;
+}
+
+h3 {
+  font-family: "Oleo Script", cursive;
+  color: tomato;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 0;
+  margin: 0;
+}
+
+.projects-section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #fcb9b9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.projects-section h1 {
+  font-family: "Aboreto", cursive;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.projects-section a {
+  text-decoration: none;
+  color: tomato;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.projects-section a:hover {
+  font-size: 1.5rem;
+}
+
+.projects-section img {
+  max-width: 20rem;
+  max-height: auto;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  border-radius: 5%;
+}
+
+.projects-section img:hover {
+  max-width: 26rem;
+  max-height: auto;
+  opacity: 50%;
+}
+
+.projects-section i {
+  padding-top: 3rem;
+  padding-bottom: 0;
+}
+
+.projects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact-section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: white;
+}
+
+.contact-section h1 {
+  font-family: "Aboreto", cursive;
+  font-size: 4rem;
+  padding: 2rem;
+}
+
+.contact-section h3 {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.contact-section h4 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 6rem;
+  color: tomato;
+}
+
+.contact-section p {
+  margin: 0;
+}
+
+.contact-section-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact-section-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-section-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+input {
+  padding: 10px 20px;
+  margin-bottom: 1.5rem;
+  margin-top: 40px;
+  margin-right: 1.5rem;
+  border: 2px solid black;
+}
+
+.textarea-input {
+  min-height: 100px;
+  min-width: 300px;
+  border: 2px solid black;
+}
+
+.submit-btn {
+  background: tomato;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.submit-btn:hover {
+  font-size: 1.11rem;
+}
+
+.fa-brands {
+  color: tomato;
+  font-size: 4rem;
+  padding: 2rem;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.fa-brands:hover {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+footer {
+  background: white;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: black;
+  font-family: "Aboreto", cursive;
+}
+/*# sourceMappingURL=style.css.map */
