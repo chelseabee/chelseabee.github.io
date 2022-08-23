@@ -444,18 +444,20 @@ input{
     
 }
 
-.fa-brands{
+#fa{
     color:tomato;
     font-size:4rem;
     padding:2rem;
     transition: all 1s ease;
 }
 
-.fa-brands:hover{
+#fa:hover{
     font-size:5rem;
     cursor:pointer;
 }
-
+.contact-label{
+    font-size: 1rem;
+}
 
 footer{
     background:white;
