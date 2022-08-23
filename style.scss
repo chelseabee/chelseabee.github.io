@@ -295,8 +295,16 @@ body{
     .about-p{
         width:50%; 
     }
+    .about-list{
+        width:45%;
+    }
     ul{
+
         list-style-type: none;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
     }
     h1{
         color:$black;
